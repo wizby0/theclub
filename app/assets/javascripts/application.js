@@ -10,8 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
+//= require cable
+//= require jquery.blueimp-gallery.min
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require respond
+//= require script
+//= require touchSwipe.min
+//= require wow.min
+//= require_tree
 //= require bootstrap
