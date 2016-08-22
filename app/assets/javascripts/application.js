@@ -13,13 +13,14 @@
 
 
 //= require cable
-//= require jquery.blueimp-gallery.min
+
 //= require jquery
 //= require jquery_ujs
+//= require jquery.blueimp-gallery.min
 //= require turbolinks
 //= require respond
-//= require script
 //= require touchSwipe.min
 //= require wow.min
+//= require script
 //= require_tree
 //= require bootstrap
