@@ -32,3 +32,6 @@
 //= require main_disp/fullby-grid-infinite.js
 //= require main_disp/jquery.magnific-popup.min.js
 //= require main_disp/fullby-script.js
+//= require main_disp/wpjquery.js
+//= require main_disp/jquery-migrate.min.js
+
