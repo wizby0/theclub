@@ -14,13 +14,21 @@
 
 //= require cable
 
-//= require jquery
+//= require multi_category/jquery
 //= require jquery_ujs
-//= require jquery.blueimp-gallery.min
+//= require multi_category/jquery.blueimp-gallery.min
 //= require turbolinks
-//= require respond
-//= require touchSwipe.min
-//= require wow.min
-//= require script
+//= require multi_category/respond
+//= require multi_category/touchSwipe.min
+//= require multi_category/wow.min
+//= require multi_category/script
 //= require_tree
 //= require bootstrap
+
+
+
+//= require main_disp/isotope.js
+//= require main_disp/jquery.infinitescroll.min.js
+//= require main_disp/fullby-grid-infinite.js
+//= require main_disp/jquery.magnific-popup.min.js
+//= require main_disp/fullby-script.js
