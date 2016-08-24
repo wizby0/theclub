@@ -13,10 +13,10 @@ updateData = ->
 			end_hour_and_min = start_hour_and_min + 100
 			
 			dataString = '{' + 
-							'"wday":"' + wday + '",' + 
-							'"start_hour_and_min":"' + start_hour_and_min + '",' + 
-							'"end_hour_and_min":"' + end_hour_and_min + '"' + 
-							'},'
+												'"wday":"' + wday + '",' + 
+												'"start_hour_and_min":"' + start_hour_and_min + '",' + 
+												'"end_hour_and_min":"' + end_hour_and_min + '"' + 
+												'},'
 			data += dataString
 	
 	$('#form-manage-time-slot-slots-data').val(data.substring(0,data.length-1) + "]")
@@ -30,6 +30,6 @@ $('#form-manage-time-slot-button').click ->
 	updateData()
 	$('#form-manage-time-slot').submit()
 
-# $ ->
-# 	$('.time-slot-button').each ->
-# 		changeColor($(this))
+$(document).ready ->
+	$('.time-slot-button').each ->
+		changeColor($(this))

@@ -13,7 +13,7 @@
 
 a{color: #b096e0 }
 
-.navbar-fixed-top .navbar-nav > li > a:hover{background-color: #b096e0}
+.navbar-fixed-top .navbar-nav > li > a:hover{background-color: #cfcfcf }
 
 a:focus, a:hover, 
 .grid-tit a:hover {color:#ffffff}  
@@ -31,12 +31,12 @@ a:focus, a:hover,
 	
 	.navbar-fixed-top .navbar-brand,
 	.navbar-fixed-top .navbar-nav li a {
-		line-height: 50px;
-		height: 50px;
+		line-height: 80px;
+		height: 80px;
 		padding-top: 0;
 	}
 	
-	.navbar-header h1 {line-height: 50px}
+	.navbar-header h1 {line-height: 80px}
 	
 	#cover:hover~.featured-bar, 
 	.featured-bar:hover, 
@@ -45,10 +45,10 @@ a:focus, a:hover,
 	body.admin-bar .featured-bar{top: 50px;}
 	
 	body.admin-bar #cover:hover~.featured-bar, 
-	body.admin-bar .featured-bar:hover {top: 102px;}
+	body.admin-bar .featured-bar:hover {top: 0px;}
 	
 	.spacer{height: 50px;}
-	.featured{min-height: 50px}
+	.featured{min-height: 80px}
 	
 }
 

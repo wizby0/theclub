@@ -1,0 +1,22 @@
+
+<%= wdays = [10,12,13,14,15] %>
+
+<div class="content">
+	<table class="table table-bordered" id="myTable" border="1" width="600" height="500">
+		<tr>
+			<td width="70"></td>
+			<% wdays.each do |wday| %>
+				<td><%= wday %></td>
+			<% end %>
+		</tr>
+		<% (10..21).each do |hour| %>
+			<% hour_code = hour * 100 %>
+			<tr>
+				<td><%= "#{hour}시" %></td>
+				<% wdays.each do |wday| %>
+					<%= content_tag :td, "", class: "time-slot-button", data: { wday: wday, hour: hour, between: between }, style: "#{"background: rgb(78, 179, 211);" if between}" %>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>

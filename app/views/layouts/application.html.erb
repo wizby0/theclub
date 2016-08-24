@@ -16,57 +16,63 @@
 </head>
 
 <body>
-
-
-  <body>
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" style="background-color:black;">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">AuthBlog</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><%= link_to "Home", root_path %></li>
-            <li class="active"><%= link_to "Posts", posts_path %></li>
-            <li class="active"><%= link_to "Posting", '/test_posts' %></li>
-            <li class="active"><%= link_to "Contact", '/team_contact' %></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag current_user.avatar, :width => 50, :height => 50 %> <%= current_user.email %> <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "My Profile", edit_user_registration_path %></li>
-                <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
-              </ul>
-            </li>
-            <% else %>
-            <li><%= link_to "Sign in", new_user_session_path %></li>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-            <% end %>
-          </ul>
-          </div><!--/.nav-collapse -->
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top nav_back" role="navigation" id="top-nav">
+    <div class="container container-top-left">
+      <div class="navbar-header ">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand menu-text logo-style" href="#">AuthBlog</a>
       </div>
-    </div>
+      <div class="navbar-collapse collapse container-top-middle">
+      <ul class="nav navbar-nav nav_back">
+          <li class="menu-text"><%= link_to "Home", root_path %></li>
+          <li class="menu-text"><%= link_to "Posts", posts_path %></li>
+          <li class="menu-text"><%= link_to "Posting", '/test_posts' %></li>
+          <li class="menu-text"><%= link_to "Schedule", '/schedule' %></li>
+          <li class="menu-text"><%= link_to "Timetable", new_timetable_path %></li>
+          <li class="menu-text"><%= link_to "Contact", '/team_contact' %></li>
+
+          <% if user_signed_in? %>
+        <li class="dropdown nav_back">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag current_user.avatar, :width => 40, :height => 40 %> <%= current_user.email %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "My Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
+          </ul>
+        </li>
+        <% else %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+         
+      </ul>
+      
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
 
 
 
 
 
-    <br></br><br></br>
+<br></br>
+<br></br><br></br>
 
-    <div class="container">
+<div class="page_content">
 
-      <%= render partial: "shared/flash_messages", flash: flash %>
+  <%= render partial: "shared/flash_messages", flash: flash %>
 
-      <%= yield %>
-    </div> <!-- /container -->
-  </body>
-  </html>
+  <%= yield %>
+</div> <!-- /container -->
+</body>
+
+
+
+
+<%= javascript_include_tag 'time_slots/manage_slots' if @include_manage_slots_js %>
+</html>
