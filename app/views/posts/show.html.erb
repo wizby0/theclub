@@ -4,18 +4,11 @@
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
   <strong>Photo:</strong>
   <%= image_tag @post.photo, :width => 200, :height => 200 %>
 </p>
 
-
-
 <p>
-  <strong>Avatar Photo:</strong>
-  <%= image_tag current_user.avatar, :width => 400, :height => 400 %>
+  <strong>Text:</strong>
+  <%= @post.content %>
 </p>

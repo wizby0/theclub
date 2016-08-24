@@ -44,3 +44,52 @@
 .nav_back{
 	background-color:black;
 }
+.posting_v{
+	height : 100px;
+}
+.posting_h{
+	margin-left : 400px;
+	margin-right : 400px;
+}
+.floating_btn{
+	position: fixed; 
+	bottom:70px;  
+	left: 500px;
+}
+
+.round-button {
+
+    background: #4679BD; 
+    
+}
+.round-button-circle {
+	width: 70px;
+	height: 70px;
+
+    border-radius: 50%;
+	border:5px solid #cfdcec;
+    overflow:hidden;
+    box-shadow: 0 0 3px gray;
+    background:#4679BD;
+    
+}
+.round-button-circle:hover {
+	background:#30588e;
+	color:#ff1f5e;
+}
+.round-button a {
+    display:block;
+
+	line-height:0px;
+	margin-top:0.2em;
+    
+	text-align:center;
+	color:#e2eaf3;
+    font-family:Verdana;
+    font-size:1.7em;
+    font-weight:bold;
+    text-decoration:none;
+}
+.post-main-col {
+	width: 600px;
+}

@@ -26,5 +26,11 @@
 
 <%= form_tag manage_slots_path, id: "form-manage-time-slot" do |f| %>
 	<%= hidden_field_tag :slots_data, "", id: "form-manage-time-slot-slots-data" %>
-	<%= content_tag :div, "저장하기", id: "form-manage-time-slot-button" %>
+	
+	<div role="button" id= "form-manage-time-slot-button" >
+	<i class="fa fa-save fa-3x" aria-hidden="true"> save
+	</i>
+	</div>
+
 <% end %>
+

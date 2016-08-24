@@ -1,18 +1,29 @@
 <h1>Listing posts</h1>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.content %></td>
-    </tr>
-  <% end %>
-</table>
 
 
-<%= link_to 'New post', new_post_path %>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <% @posts.each do |post| %>
+    <div class="thumbnail">
+      <%= image_tag post.photo %> 
+      <div class="caption">
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+        <p>
+          <a href="#" class="btn btn-primary" role="button">Show</a> 
+          <a href="#" class="btn btn-default" role="button">Edit</a>
+        </p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="round-button">
+  <div class= "floating_btn round-button-circle" role="navigation">
+    <a href= "/posts/new" role="button">
+    <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+    </a> 
+  </div>
+ </div>

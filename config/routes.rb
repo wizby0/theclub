@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :posts
   resources :timetable
-  
-  root 'welcome#test_show'
-  get '/test_posts' => 'welcome#index'
+
+  root 'welcome#index'
+  # get '/test_posts' => 'welcome#index'
+  get '/category' => 'posts#posting_category'
   get '/team_contact' => 'welcome#contact'
   get '/schedule' => 'time_slots#schedule'
   

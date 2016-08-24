@@ -64,7 +64,7 @@ a:focus, a:hover{color:#ff0052;}
 
 /* Menus */
 
-.navbar {margin:0;border:none;border-radius:0;background-image: none;text-transform: uppercase;position: relative; background:#00ebbe}
+.navbar_wz {margin:0;border:none;border-radius:0;background-image: none;text-transform: uppercase;position: relative; background:#00ebbe}
 .navbar h1{margin:0;}
 .navbar .logo-img{position: absolute; top:0;left:20px;z-index: 10}
 .navbar small{font-size:12px;text-transform: lowercase;color:#fff;}
