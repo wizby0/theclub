@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825053423) do
+ActiveRecord::Schema.define(version: 20160825053909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.string   "text"
+    t.string   "category"
+    t.integer  "leader_id"
+    t.string   "start_time"
+    t.string   "integer"
+    t.string   "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -22,7 +34,20 @@ ActiveRecord::Schema.define(version: 20160825053423) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "photo"
+    t.integer  "season_id"
+    t.index ["season_id"], name: "index_posts_on_season_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "seasons", force: :cascade do |t|
+    t.integer  "group_id"
+    t.text     "name"
+    t.integer  "leader_id"
+    t.integer  "start_time"
+    t.integer  "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_seasons_on_group_id", using: :btree
   end
 
   create_table "time_slots", force: :cascade do |t|
@@ -49,12 +74,13 @@ ActiveRecord::Schema.define(version: 20160825053423) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "Avatar"
     t.string   "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "posts", "seasons"
   add_foreign_key "posts", "users"
+  add_foreign_key "seasons", "groups"
   add_foreign_key "time_slots", "users"
 end

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  text: MyString
+  category: MyString
+  leader_id: 1
+  start_time: MyString
+  integer: MyString
+  end_time: MyString
+  integer: MyString
+
+two:
+  name: MyString
+  text: MyString
+  category: MyString
+  leader_id: 1
+  start_time: MyString
+  integer: MyString
+  end_time: MyString
+  integer: MyString

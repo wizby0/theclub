@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.season_id = Season.last.id
 
     @post.save
 
@@ -53,6 +54,6 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       # params.require(:post).permit(:title, :content, :photo)
-      params.require(:post).permit(:title, :content, :user_id, :photo)
+      params.require(:post).permit(:title, :content, :user_id, :season_id, :photo)
     end
 end
