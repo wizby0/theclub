@@ -34,3 +34,20 @@ season.leader_id = "1"
 season.start_time = "20160823"
 season.end_time = "20160923"
 season.save!
+
+
+
+words_lists = ["programing","coffee","lifestyle","writing","language","sports"]
+words_lists.each_with_index do |word,index|
+  category = Category.new
+  category.name = word
+  category.save!
+end
+
+
+sra_list = [["open college", "서울특별시 서초구 방배1동 908-21"], ["이우주", "15号 Xueyuan Rd, Haidian, Beijing, 중국"]]
+sra_list.each_with_index do |sra,index|
+location = Location.new
+location.name = "#{sra_list[0]}"
+location.address = "#{sra_list[1]}"
+location.save!

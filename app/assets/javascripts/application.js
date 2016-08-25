@@ -35,3 +35,5 @@
 //= require main_disp/wpjquery.js
 //= require main_disp/jquery-migrate.min.js
 
+//= require underscore
+//= require gmaps/google

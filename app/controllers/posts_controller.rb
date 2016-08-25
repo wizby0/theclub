@@ -27,6 +27,8 @@ class PostsController < ApplicationController
     @post.season_id = Season.last.id
 
     @post.save
+    # Categorizing.create(category_id: params[:category_temp_id[:cate_index]] , post_id: Post.last.id)
+    Categorizing.create(category_id: params[:category_temp2_id] , post_id: Post.last.id)
 
     redirect_to @post    
   end

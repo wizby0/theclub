@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # get '/test_posts' => 'welcome#index'
   get '/category' => 'posts#posting_category'
   get '/team_contact' => 'welcome#contact'
+  get '/map' => 'welcome#map'
   get '/schedule' => 'time_slots#schedule'
   
   post 'manage_slots' => 'time_slots#manage_slots'

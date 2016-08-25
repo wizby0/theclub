@@ -1,13 +1,35 @@
+<% @include_manage_category_js = true %>
+
+
 <div class = "post-main-col">
+
+<div class="content">
+<table class="table table-bordered" id="myTable" border="1" width="600" height="40">
+  <tr>
+      <td  width="70">check</td>
+      <% Category.order(:id).each do |cat| %>
+        <%= content_tag :td, cat.name, class: "category-slot-button", data: { cat: cat.id,  between: false} %>
+      <% end %>
+    </tr>
+
+</table>
+</div>
+
+
+<%= collection_select(:category_temp_id, :cate_index, Category.all, :id, :name) %>
+
 
 
 <%= simple_form_for(@post) do |f| %>
   <%= f.error_notification %>
-
   <div class="form-inputs">
+
+
+
     <%= f.input :title %>
     <%= f.input :content %>
     <%= f.input :photo %>
+    <%= f.input :selected_categories_ids %>
 
 
   </div>
@@ -18,3 +40,4 @@
 <% end %>
 
 </div>
+
