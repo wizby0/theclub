@@ -1,28 +1,20 @@
 <br></br><br></br><br></br>
 
 
-<p>
-  <strong>Group:</strong>
-  <%= @post.season.group.name %>
-</p>
 
-<p>
-  <strong>Season:</strong>
-  <%= @post.season.name %>
-</p>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag @post.photo %> 
+      <div class="caption">
+        <h3><%= @post.title %></h3>
+        <span>Group:<%= @post.season.group.name %></spanp>
+        <span>Season:<%= @post.season.name %></span>
 
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
- 
-<p>
-  <strong>Photo:</strong>
-  <%= image_tag @post.photo, :width => 200, :height => 200 %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @post.content %>
-</p>
+        <p><%= @post.content %></p>
+        <p></p>
+      </div>
+    </div>
+    
+  </div>
+</div>

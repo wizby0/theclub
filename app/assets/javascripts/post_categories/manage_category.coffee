@@ -4,18 +4,13 @@ changeColor = ($object) ->
 	else
 		$object.css("background", "#FFFFFF")
 
-updateData = ->
+putData = ->
 	data = "["
 	$('.time-slot-button').each ->
 		if $(this).data("between") == true
-			wday = $(this).data("wday")
-			start_hour_and_min = $(this).data("hour") * 100
-			end_hour_and_min = start_hour_and_min + 100
-			
+			wday = $(this).data("wday")		
 			dataString = '{' + 
-												'"wday":"' + wday + '",' + 
-												'"start_hour_and_min":"' + start_hour_and_min + '",' + 
-												'"end_hour_and_min":"' + end_hour_and_min + '"' + 
+												'"selected_categories_ids":"' + selected_categories_ids + '",' + 
 												'},'
 			data += dataString
 	
@@ -26,8 +21,8 @@ $('.category-slot-button').click ->
 	$slot.data("between", if $slot.data("between") == true then false else true)
 	changeColor($slot)
 
-$('#form-manage-time-slot-button').click ->
-	updateData()
+$('#form-manage-category-button').click ->
+	putData()
 	$('#form-manage-time-slot').submit()
 
 $(document).ready ->

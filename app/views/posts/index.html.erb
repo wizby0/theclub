@@ -11,8 +11,10 @@
         <h3><%= post.title %></h3>
         <p><%= post.content %></p>
         <p>
-          <a href="#" class="btn btn-primary" role="button">Show</a> 
-          <a href="#" class="btn btn-default" role="button">Edit</a>
+          <div class="btn btn-primary"> <%= link_to 'SHOW', post_path(post) %> SHOW</div>
+          <div class="btn btn-primary"> <%= link_to 'EDIT', edit_post_path(post) %>EDIT</div>
+          <div class="btn btn-default"> <%= link_to 'DESTROY', post_path(post),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>DESTORY</div>
         </p>
       </div>
     </div>

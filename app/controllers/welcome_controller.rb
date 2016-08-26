@@ -1,5 +1,9 @@
 class WelcomeController < ApplicationController
 	def index
+		@posts = Post.all
+		# @posts = Post.last(7) #display recent 7 posts
+		
+		@categories = Category.all
 	end
 
 
